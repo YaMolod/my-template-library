@@ -7,7 +7,6 @@ bin/
 bin-intermediates/
 
 # Бинарные файлы и библиотеки
-*.exe
 *.dll
 *.lib
 *.pdb
