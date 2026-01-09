@@ -22,6 +22,7 @@ bin-intermediates/
 .vs/
 *.suo
 *.user
+*.filters
 *.userosscache
 *.sln.docstates
 *.ncb
@@ -30,3 +31,6 @@ bin-intermediates/
 *.ipch
 *.db
 *.opendb
+*.sln
+*.slnx
+*.vcxproj
