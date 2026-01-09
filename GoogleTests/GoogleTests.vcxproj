@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{55AE7AA4-C163-F399-4A58-ED70B60CEA9D}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GoogleTests</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)..\bin\Debug\GoogleTests\</OutDir>
+    <IntDir>$(ProjectDir)..\bin-intermediates\Debug\GoogleTests\</IntDir>
+    <TargetName>GoogleTests</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\bin\Release\GoogleTests\</OutDir>
+    <IntDir>$(ProjectDir)..\bin-intermediates\Release\GoogleTests\</IntDir>
+    <TargetName>GoogleTests</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>..\MTL;.;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ProjectReference>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>..\MTL;.;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <ProjectReference>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\gtest\gtest-assertion-result.h" />
+    <ClInclude Include="include\gtest\gtest-death-test.h" />
+    <ClInclude Include="include\gtest\gtest-matchers.h" />
+    <ClInclude Include="include\gtest\gtest-message.h" />
+    <ClInclude Include="include\gtest\gtest-param-test.h" />
+    <ClInclude Include="include\gtest\gtest-printers.h" />
+    <ClInclude Include="include\gtest\gtest-spi.h" />
+    <ClInclude Include="include\gtest\gtest-test-part.h" />
+    <ClInclude Include="include\gtest\gtest-typed-test.h" />
+    <ClInclude Include="include\gtest\gtest.h" />
+    <ClInclude Include="include\gtest\gtest_pred_impl.h" />
+    <ClInclude Include="include\gtest\gtest_prod.h" />
+    <ClInclude Include="include\gtest\internal\custom\gtest-port.h" />
+    <ClInclude Include="include\gtest\internal\custom\gtest-printers.h" />
+    <ClInclude Include="include\gtest\internal\custom\gtest.h" />
+    <ClInclude Include="include\gtest\internal\gtest-death-test-internal.h" />
+    <ClInclude Include="include\gtest\internal\gtest-filepath.h" />
+    <ClInclude Include="include\gtest\internal\gtest-internal.h" />
+    <ClInclude Include="include\gtest\internal\gtest-param-util.h" />
+    <ClInclude Include="include\gtest\internal\gtest-port-arch.h" />
+    <ClInclude Include="include\gtest\internal\gtest-port.h" />
+    <ClInclude Include="include\gtest\internal\gtest-string.h" />
+    <ClInclude Include="include\gtest\internal\gtest-type-util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\gtest-all.cc" />
+    <ClCompile Include="src\gtest_main.cc" />
+    <ClCompile Include="tests\MemoryTest.cpp" />
+    <ClCompile Include="tests\StringTest.cpp" />
+    <ClCompile Include="tests\VectorTest.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

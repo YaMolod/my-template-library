@@ -1,0 +1,32 @@
+# === Сборка и артефакты (C++ / Windows) ===
+[Dd]ebug/
+[Rr]elease/
+[Xx]64/
+out/
+bin/
+bin-intermediates/
+
+# Бинарные файлы и библиотеки
+*.exe
+*.dll
+*.lib
+*.pdb
+*.exp
+*.obj
+*.ilk
+*.aps
+*.res
+*.idb
+
+# === Visual Studio (2022, 2026 и аналоги) ===
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.ncb
+*.sdf
+*.opensdf
+*.ipch
+*.db
+*.opendb
