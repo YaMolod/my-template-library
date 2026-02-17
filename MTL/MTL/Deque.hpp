@@ -8,6 +8,7 @@ namespace mtl
 	{
 	public:
 		class iterator;
+		static constexpr size_t BLOCK_SIZE{ 8 };
 
 		deque()
 		{
@@ -55,7 +56,7 @@ namespace mtl
 		{
 			swap(*this, rhs);
 		}
-		deque& operator=(deque rhs)
+		deque& operator=(deque rhs) noexcept
 		{
 			swap(*this, rhs);
 			return *this;
@@ -279,6 +280,20 @@ namespace mtl
 			{
 				return *(*this + n);
 			}
+			friend ptrdiff_t operator-(const iterator& lhs, const iterator& rhs)
+			{
+				ptrdiff_t distance;
+				if (lhs.block == rhs.block)
+					distance = lhs.cur - rhs.cur;
+				else
+				{
+					ptrdiff_t block_offset = lhs.block - rhs.block;
+					ptrdiff_t left_offset = lhs.cur - lhs.front;
+					ptrdiff_t right_offset = rhs.cur - rhs.front;
+					distance = block_offset * BLOCK_SIZE + left_offset - right_offset;
+				}
+				return distance;
+			}
 			friend iterator operator+(iterator it, difference_type n)
 			{
 				return it += n;
@@ -377,7 +392,6 @@ namespace mtl
 			std::swap(lhs.m_BackPos, rhs.m_BackPos);
 		}
 	private:
-		static constexpr size_t BLOCK_SIZE{ 8 };
 		static constexpr size_t MAP_MINIMUM_SIZE{ 8 };
 
 		T** m_Map{ nullptr };

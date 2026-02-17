@@ -1,6 +1,5 @@
 #include <gtest/gtest.h>
 #include "mtl/deque.hpp"
-#include <deque>
 
 TEST(DequeTest, DefaultConstructor) {
     mtl::deque<int> dq;
@@ -62,8 +61,8 @@ TEST(DequeTest, Iterators) {
     auto it2 = it + 2;
     EXPECT_EQ(*(2 + it2), 70);
 
-    //EXPECT_EQ(it2 - it, 2);
-    //EXPECT_EQ(it - it2, -2);
+    EXPECT_EQ(it2 - it, 2);
+    EXPECT_EQ(it - it2, -2);
 
     EXPECT_TRUE(it < it2);
     EXPECT_TRUE(it2 > it);
